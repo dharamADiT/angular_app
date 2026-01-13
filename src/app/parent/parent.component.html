@@ -1,0 +1,78 @@
+<div>
+  <div class="parent-main-div">
+    <div class="wrapper">
+      <div class="container">
+        <div class="top"></div>
+        <div class="bottom">
+          <div class="left">
+            <div class="details">
+              <h1>Leptop</h1>
+              <p>£250</p>
+            </div>
+            <div class="right">
+
+              <button (click)="onbtnClick('Leptop')">Select</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+        
+
+    <div class="wrapper">
+      <div class="container">
+        <div class="top"></div>
+        <div class="bottom">
+          <div class="left">
+            <div class="details">
+              <h1>Television</h1>
+              <p>£250</p>
+            </div>
+            <div class="right">
+
+              <button (click)="onbtnClick('Television')">Select</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="top"></div>
+        <div class="bottom">
+          <div class="left">
+            <div class="details">
+              <h1>Smartphone</h1>
+              <p>£250</p>
+            </div>
+            <div class="right">
+              <button (click)="onbtnClick('Smartphone')">Select</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <app-child [selectPro]="sPro"
+   [selectedProduct]="selProduct"
+   (isCart)="childfnc($event)"
+   ></app-child>
+ 
+  <div class="cart" *ngIf="isCart">
+    <p>Cart List</p>
+    <p>{{isCart}} is added in cart </p>
+    <button (click)="checkOut()">check for out</button>
+
+  </div>
+</div>

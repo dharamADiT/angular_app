@@ -1,0 +1,173 @@
+
+
+$color: #003e9f;
+$roboto: 'Roboto Condensed', sans-serif;
+
+
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #e2e1e0;
+ 
+}
+
+section {
+  &.player-card {
+    width: 300px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.13);
+    
+    .card {
+      float: left;
+      width: 100%;
+    
+      border-radius: 10px;
+      
+    }
+    
+    header {
+      width: 100%;
+     padding: 10px 0;
+      background: $color;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      a {
+        &.profile {
+          img {
+            height: auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 10px solid transparent;
+           
+            z-index: 2;
+          }
+          
+          &:after {
+            content: "";
+            width: 120px;
+            height: 120px;
+            background-color: transparent;
+
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    
+    article {
+      background-color: white;
+      display: block;
+      position: relative;
+      padding: 20px 0;
+      
+      font-family: $roboto;
+      
+      h1 {
+        
+        font-size: 28px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 600;
+        color: #323232;
+      }
+      
+      h2 {
+        
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #7f7f7f;
+      }
+      
+      .info {
+        display: flex;
+
+        
+        div {
+          text-align: center;
+          width: 33%;
+          
+          span {
+            display: block;
+            
+            &:nth-of-type(1) {
+              font-weight: bold;
+              font-size: 24px;
+            
+              color: #323232;
+            }
+            
+            &:nth-of-type(2) {
+              font-size: 12px;
+              text-transform: uppercase;
+              color: #7f7f7f;
+              letter-spacing: .5px;
+            }
+          }
+        }
+      }
+    }
+    
+    a {
+      &.codepen-logo {
+        text-decoration: none;
+        
+        &:hover {
+          .icon-codepen {
+            background-color: darken($color, 10%);
+          }
+          
+          @media (min-width: 1024px) {
+            &:after {
+              opacity: 1;
+              bottom: -75px;
+            }
+          }
+        }
+        
+        svg {
+          display: inline-block;
+          overflow: hidden;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+         
+          z-index: 10;
+          background-color: $color;
+          text-align: center;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.09);
+         
+          fill: set-icon-color($color);
+        }
+
+        &:after {
+          content: "View CodePen Profile";
+        
+          display: inline-block;
+          text-align: center;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #ffffff;
+          letter-spacing: 1px;
+          font-family: $roboto;
+          background-color: darken(#e2e1e0, 20%);
+         
+          border-radius: 4px;
+          opacity: 0;
+          
+          z-index: -1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+ <div class="bottom-div-parent">
+    <ng-container *ngIf="!selectPro">
+      Please select any product
+    </ng-container>
+    <ng-container *ngIf="selectPro">
+      {{selectedProduct}} selected
+    </ng-container>
+    <button (click)="addToCard()">add to cart</button>
+    
+
+  </div>

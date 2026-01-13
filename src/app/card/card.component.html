@@ -1,0 +1,33 @@
+<section class="player-card">
+  <div class="card">
+    <header>
+      <a class="profile">
+        <ng-content select="img"></ng-content>
+      </a>
+    </header>
+
+    <article>
+    <ng-content select="h1"></ng-content>
+    <ng-content select="h2"></ng-content>
+      
+      <div class="info">
+        <div>
+    <ng-content select=".span1"></ng-content>
+          <span>Pens</span>
+        </div>
+        
+        <div>
+        <ng-content select=".span2"></ng-content>
+          <span>Followers</span>
+        </div>
+        
+        <div>
+        <ng-content select="span:not(.span1):not(.span2)"></ng-content>
+          <span>Following</span>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+</section>

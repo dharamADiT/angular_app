@@ -1,0 +1,29 @@
+
+.main{
+    padding: 10px 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+    
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding: 30px 0;
+    .Ul-list{
+        display: flex;
+        gap: 15px;
+    list-style: none;
+    font-size: 20px;
+    .lists{
+       
+        cursor: pointer;
+        
+    }
+   
+    }
+    .active{
+        color: rgb(223, 102, 102);
+    }
+    
+    
+}

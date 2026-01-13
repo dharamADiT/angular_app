@@ -1,0 +1,22 @@
+<div class="main-div">
+    <div class="header-div">
+        <h1>Crud Operation</h1>
+    </div>
+    <div class="input-div">
+        <input class="inpbtn" type="text" #inputUser placeholder="username">
+        <button class="inpbtn" (click)="CreateHandler(inputUser)">Create User</button>
+    </div>
+    <small class="warning-msg">{{msg}}</small>
+    <div class="user-detail">
+        <h2>User Details</h2>
+    </div>
+
+    <ng-container *ngFor="let user of users; let i = index">
+        <div class="cntnt-div">
+            <h2>{{user.name}}</h2>
+
+            <button (click)="DeleteHandler(i)">Delete User</button>
+
+        </div>
+    </ng-container>
+</div>
