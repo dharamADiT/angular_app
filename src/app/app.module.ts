@@ -22,8 +22,6 @@ import { UtilsService } from './appServices/utils.service';
 
 import { Project1Component } from './project1/project1.component';
 import { Project1Module } from './project1/project1.module';
-import { ProChild2Component } from './project1/pro-child/pro-child2/pro-child2.component';
-import { RelateComponent } from './relate/relate.component';
 
 
 
@@ -38,20 +36,15 @@ const appRoutes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "buy-product", component:ParentComponent },
   { path: "single-product", component: SingleProductComponent },
+  {path: "projects", component: Project1Component},
   {
-    path: "product",  component: ProductComponent,
+    path: "products",  component: ProductComponent,
     children: [
-      // { path: "", component: ProductComponent },
-      { path: "leptop", component: LeptopProductComponent,
-        children: [
-          // { path: "" },
-           
-        ]
-      }
+      
+      { path: "leptop", component: LeptopProductComponent}
 
     ]
   },
-  {path:"projects", component:RelateComponent},
   { path: "**", component: PageNotFoundComponent },
 
 ]
@@ -59,23 +52,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    LoginComponent,
-    CrudComponent,
-    PageNotFoundComponent,
-    ProductComponent,
-    SingleProductComponent,
-    LeptopProductComponent,
-    CardComponent,
-    ParentComponent,
-    ChildComponent,
-    Card1Component,
-    Card2Component,
-    
    
-    RelateComponent
  
    
     

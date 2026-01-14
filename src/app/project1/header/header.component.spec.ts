@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProChild2Component } from './pro-child2.component';
+import { HeaderComponent } from './header.component';
 
-describe('ProChild2Component', () => {
-  let component: ProChild2Component;
-  let fixture: ComponentFixture<ProChild2Component>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProChild2Component]
+      declarations: [HeaderComponent]
     });
-    fixture = TestBed.createComponent(ProChild2Component);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

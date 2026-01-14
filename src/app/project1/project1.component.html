@@ -1,9 +1,17 @@
-<div class="project-div">
-    <div class="upper-div">
-    <h2>hello</h2>
+<div class="w-full h-full bg-gray-900 flex gap-8">
+    <div>
+        <h2 class="font-bold text-6xl">project 1</h2>
+        <input type="text" #data>
+        <button (click)="dataSend(data)"> click for send data</button>
     </div>
     
-
 </div>
-<app-pro-child></app-pro-child>
-<app-pro-child2></app-pro-child2>
+<br><br>
+<button (click)="callChild()">
+    click for call footer methods
+</button>
+<br><br>
+<p>this data comes from child:- {{massage}}</p><br><br><br>
+<app-header [dataFromParent]="DataOfParent" (notify)="datatake($event)"></app-header>
+<br><br><br>
+<app-footer></app-footer>
