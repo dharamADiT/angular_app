@@ -7,7 +7,8 @@ import { Project1Module } from './project1/project1.module';
 import { DataGardnerModule } from './data-gardner/data-gardner.module';
 import { ProductModule } from './product/product.module';
 import { HomeModule } from './home/home.module';
-import { ProductComponent } from './product/product.component';
+import { IndianClientComponent } from './indian-client/indian-client.component';
+import { UkClientComponent } from './uk-client/uk-client.component';
 
 @NgModule({
   declarations: [AppComponent],
